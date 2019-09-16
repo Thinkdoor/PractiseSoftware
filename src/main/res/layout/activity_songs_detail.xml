@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_news_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/icon_fragment_bg"
+    tools:context="com.example.tablayoutmenu.NewsDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_songsdetail_songstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名"
+        android:textSize="40sp"/>
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_songsdetail_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="15sp"/>
+        <SeekBar
+            android:layout_toRightOf="@id/tv_songsdetail_current"
+            android:id="@+id/sb_songsdetail"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_toRightOf="@id/sb_songsdetail"
+            android:id="@+id/tv_songsdetail_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="开始"
+            android:onClick="startSong"
+            android:background="@drawable/icon_button"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="暂停"
+            android:onClick="pauseSong"
+            android:background="@drawable/icon_button"/>
+    </LinearLayout>
+</LinearLayout>
